@@ -13,44 +13,34 @@
     <!-- <h2>Find your rhythm. Feel your best.</h2> -->
     <p style='margin-top: 40px;'>suncadian helps you harness the power of natural sunlight to optimize your sleep, boost your energy, and sync your body's internal clock.</p>
     <form class="waitlist-form-row needs-validation" novalidate  action="https://formspree.io/f/xnnzpwwp" method="POST">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" aria-label="Enter your business email" aria-describedby="waitlist-btn" required>
-            <button type="submit" class="btn" id="waitlist-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path fill="#000" d="M11.03 5.97a.75.75 0 0 0-1.08-.02L7.477 8.417 6.384 7.323a.75.75 0 0 0-1.06 1.06l2.146 2.146a.75.75 0 0 0 1.079-.02l2.492-3.11a.75.75 0 0 0-.01-1.05z"/></svg>
-            Join the waitlist
-            </button>
-            <div class="g-recaptcha" data-sitekey="6LfxB3YrAAAAALSAUmKh9OyQ6bTXHY-xg6G1UkKB"></div>
-            <div id="email-error" style="color:#d90429; font-size:0.98rem; margin-top:0.5rem; width:100%; text-align:center; display:none;">Please enter a valid email address.</div>
-            <div id="email-null-error" style="color:#d90429; font-size:0.98rem; margin-top:0.5rem; width:100%; text-align:center; display:none;">Please enter an email address.</div>
+            <input type="email" class="form-control" name="email" id="email" placeholder="enter your email" aria-label="Enter your business email" aria-describedby="waitlist-btn" required>
+            <button type="submit" class="btn" id="waitlist-btn">get early access</button>
+            <!-- <div class="g-recaptcha" data-sitekey="6LfxB3YrAAAAALSAUmKh9OyQ6bTXHY-xg6G1UkKB"></div> -->
+            <div id="email-error" style="color:#d90429; font-size:0.98rem; margin-top:0.5rem; width:100%; text-align:center; display:none;">please enter a valid email address.</div>
+            
           </form>
   </div>
-</body>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const form = document.querySelector('.cta-form-row');
+      const form = document.querySelector('.waitlist-form-row');
       const emailInput = document.getElementById('email');
       const errorDiv = document.getElementById('email-error');
-      const nullErrorDiv = document.getElementById('email-null-error');
 
 
       form.addEventListener('submit', function(e) {
         let valid = true;
         errorDiv.style.display = 'none';
-        nullErrorDiv.style.display = 'none';
         emailInput.classList.remove('is-invalid');
 
         const emailValue = emailInput.value.trim();
         // Simple email regex
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(emailValue) || emailValue === '') {
+        if (!emailPattern.test(emailValue)) {
           valid = false;
           errorDiv.style.display = 'block';
           emailInput.classList.add('is-invalid');
         }
-        if (emailValue === '') {
-          valid = false;
-          nullErrorDiv.style.display = 'block';
-          emailInput.classList.add('is-invalid');
-        }
+      
         if (!valid) {
           e.preventDefault();
           e.stopPropagation();
@@ -62,4 +52,5 @@
       });
     });
   </script>
+</body>
 </html>

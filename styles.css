@@ -27,7 +27,7 @@ body{
   background-size: cover;
 }
 p{
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -51,7 +51,7 @@ p{
   justify-content: center;
   align-items: stretch;
   gap: 0;
-  margin: 6rem 0 4rem;
+  margin: 3rem 0 4rem;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -62,7 +62,7 @@ p{
   border-radius: 0.375rem 0 0 0.375rem;
   min-width: 320px;
   font-size: 1.1rem;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 1rem;
   flex: 1 1 220px;
   width: 100%;
   max-width: 400px;
@@ -78,7 +78,7 @@ input.form-control:active,input.form-control:focus{
 } 
 
 .waitlist-form-row .btn {
-  background: #000;
+  background: #A8C6C1;
   color: #fff;
   border: none;
   border-radius: 0 0.375rem 0.375rem 0;
@@ -87,12 +87,12 @@ input.form-control:active,input.form-control:focus{
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.50rem 1.5rem;
   transition: background 0.2s;
   margin-left: 1px;
   flex-shrink: 0;
 }
 .waitlist-form-row .btn:hover {
-  background: #b8b8b8;
-  color: #000;
+  background: #adccc6;
+  color: #fff;
 }
